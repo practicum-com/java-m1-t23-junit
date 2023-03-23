@@ -19,26 +19,26 @@ public class FortuneCookieFactory {
         }
 
         /**
-         * Возвращает количество испечённых печенек
+         * Returning the number of baked cookies:
          */
         public int getCookiesBaked() {
                 return this.cookiesBaked;
         }
 
         /**
-         * Обнуляет счётчик созданных печенек
+         * Resetting the counter of created cookies:
          */
         public void resetCookiesCreated() {
                 this.cookiesBaked = 0;
         }
 
         /**
-         * Печёт печеньку!
+         * Baking a cookie!
          */
         public FortuneCookie bakeFortuneCookie() {
                 final String fortune;
 
-                // Возвращает хорошее или плохое предсказание
+                // Returning a good or bad prediction:
                 if (this.fortuneConfig.isPositive()) {
                         fortune = goodFortune.get(rnd.nextInt(goodFortune.size()));
                 } else {
@@ -49,7 +49,7 @@ public class FortuneCookieFactory {
         }
 
         /**
-         * Увеличивает счётчик испечённых печенек
+         * Increasing the counter of baked cookies:
          */
         private void incrementNumberOfCookiesCreated() {
                 this.cookiesBaked++;
