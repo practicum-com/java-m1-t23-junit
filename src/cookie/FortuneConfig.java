@@ -1,6 +1,6 @@
 package cookie;
 
-/** Хранит конфигурацию фабрики по производству печенек с предсказаниями.*/
+/** Stores the configuration of the fortune cookie factory.*/
 public class FortuneConfig {
     private final boolean isPositive;
 
