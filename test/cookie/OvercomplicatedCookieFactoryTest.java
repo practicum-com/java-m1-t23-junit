@@ -13,8 +13,8 @@ public class OvercomplicatedCookieFactoryTest {
     @BeforeEach
     public void beforeEach() {
          cookieFactory = new OvercomplicatedCookieFactory(
-                Collections.singletonList("Вам повезёт!"),
-                Collections.singletonList("Сегодня будет дождь"),
+                Collections.singletonList("You'll be lucky!"),
+                Collections.singletonList("It'll rain today."),
                 true
         );
     }
@@ -22,7 +22,7 @@ public class OvercomplicatedCookieFactoryTest {
     @Test
     public void shouldReturnPositiveCookie() {
         String cookieText = cookieFactory.bakeFortuneCookie();
-        Assertions.assertEquals("Вам повезёт!", cookieText);
+        Assertions.assertEquals("You'll be lucky!", cookieText);
     }
 
     @Test
