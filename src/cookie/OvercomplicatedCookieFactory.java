@@ -23,30 +23,30 @@ public class OvercomplicatedCookieFactory {
         this.isPositive = isPositive;
     }
 
-    /** Печёт печеньку! */
+    /** Baking a cookie! */
     public String bakeFortuneCookie() {
         StringBuilder cookieBuilder = new StringBuilder();
 
-        // Увеличиваем счётчик печенек
+        // Increasing the cookie counter:
         this.incrementNumberOfCookiesCreated();
 
-        // Возвращаем хорошее или плохое предсказание
+        // Returning a good or bad prediction:
         if (isPositive) {
             cookieBuilder.append(randomPositive());
         } else {
             cookieBuilder.append(randomNegative());
         }
 
-        // Преобразовываем результат в строку
+        // Converting the result into a string:
         return cookieBuilder.toString();
     }
 
-    /** Возвращает количество испечённых печенек */
+    /** Returning the number of baked cookies: */
     public int getCookiesCreated() {
         return this.cookiesCreated;
     }
 
-    /** Обнуляет счётчик созданных печенек */
+    /** Resetting the counter of created cookies: */
     public void resetCookiesCreated() {
         this.cookiesCreated = 0;
     }
@@ -57,16 +57,16 @@ public class OvercomplicatedCookieFactory {
         this.cookiesCreated++;
     }
 
-    /** Выбирает произвольное предсказание из списка позитивных */
+    /** Choosing a random prediction from the list of positive predictions: */
     private String randomPositive() {
-        // Получаем целое случайное число от нуля до максимального размера массива - 1.
+        // Getting a random integer from zero to the maximum size of the array (1).
         int randomIndex = rnd.nextInt(positiveTexts.size());
         return positiveTexts.get(randomIndex);
     }
 
-    /** Выбирает произвольное предсказание из списка негативных */
+    /** Choosing a random prediction from the list of negative predictions */
     private String randomNegative() {
-        // Получаем целое случайное число от нуля до максимального размера массива - 1.
+        // Getting a random integer from zero to the maximum size of the array (1).
         int randomIndex = rnd.nextInt(negativeTexts.size());
         return negativeTexts.get(randomIndex);
     }
