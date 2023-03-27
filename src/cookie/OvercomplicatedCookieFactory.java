@@ -9,8 +9,8 @@ public class OvercomplicatedCookieFactory {
     private final List<String> negativeTexts;
     private final boolean isPositive;
 
-    /** Класс Random возвращает «псевдо-случайные» числа. Здесь он используется, чтобы возвращать случайное предсказание
-     * из списка, а не конкретное.  */
+    /** The Random class returns “pseudo-random” numbers. Here it returns a random prediction
+     * from a list, not a specific one. */
     private final Random rnd = new Random();
 
     public OvercomplicatedCookieFactory(
@@ -52,7 +52,7 @@ public class OvercomplicatedCookieFactory {
     }
 
 
-    /** Увеличивает счётчик испеченных печенек */
+    /** Increases the counter of baked cookies */
     private void incrementNumberOfCookiesCreated() {
         this.cookiesCreated++;
     }
